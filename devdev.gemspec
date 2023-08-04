@@ -13,7 +13,8 @@ Gem::Specification.new do |spec|
   spec.required_ruby_version  = '>= 2.7.0'
   spec.files                  = Dir['README.md', 'LICENSE', 'CHANGELOG.md', 'lib/**/*.rb', 'lib/**/*.rake', 'devdev.gemspec', '.github/*.md', 'Gemfile', 'Rakefile']
   spec.extra_rdoc_files       = ['README.md']
+  spec.executables            = ['devdev']
 
   spec.add_development_dependency 'rubocop', '~> 1.55'
-  spec.add_development_dependency 'rubocop-rspec'
+  spec.add_development_dependency 'rubocop-rspec', '~> 2.23'
 end
