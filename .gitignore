@@ -1,0 +1,8 @@
+*.gem
+coverage/*
+Gemfile.lock
+*~
+.bundle
+.rvmrc
+log/*
+.env
