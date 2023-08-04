@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module DevDev
   class << self
     # view all commands
@@ -18,7 +20,7 @@ module DevDev
 
     # this will be built from a config created by the user
     def cmd_hash
-      @commands ||= { "brew install node": false, "yarn install": false, "rails db:create": false }
+      @cmd_hash ||= { 'brew install node': false, 'yarn install': false, 'rails db:create': false }
     end
   end
 end

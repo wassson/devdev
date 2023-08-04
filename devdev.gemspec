@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require File.expand_path('lib/devdev/version', __dir__)
 
 Gem::Specification.new do |spec|
@@ -11,10 +13,12 @@ Gem::Specification.new do |spec|
   spec.license                = 'MIT'
   spec.platform               = Gem::Platform::RUBY
   spec.required_ruby_version  = '>= 2.7.0'
-  spec.files                  = Dir['README.md', 'LICENSE', 'CHANGELOG.md', 'lib/**/*.rb', 'lib/**/*.rake', 'devdev.gemspec', '.github/*.md', 'Gemfile', 'Rakefile']
+  spec.files                  = Dir['README.md', 'LICENSE', 'CHANGELOG.md', 'lib/**/*.rb', 'lib/**/*.rake',
+                                    'devdev.gemspec', '.github/*.md', 'Gemfile', 'Rakefile']
   spec.extra_rdoc_files       = ['README.md']
   spec.executables            = ['devdev']
 
   spec.add_development_dependency 'rubocop', '~> 1.55'
   spec.add_development_dependency 'rubocop-rspec', '~> 2.23'
+  spec.metadata['rubygems_mfa_required'] = 'true'
 end
