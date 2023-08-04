@@ -1,5 +1,5 @@
 # frozen_string_literal: true
 
-module DevDev
-  VERSION = '0.0.5'
+module Devdev
+  VERSION = '0.0.6'
 end
