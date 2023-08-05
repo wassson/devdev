@@ -1,13 +1,23 @@
-require 'spec_helper'
-require 'rspec'
-require 'devdev'
+require "spec_helper"
+require "rspec"
+require "devdev"
 
 describe DevDev do
-  let!(:devdev) { described_class }
+  context "when executing devdev" do
+    # describe "without options" do
+    #   let!(:build) { system("devdev") }
+    #
+    #   it "will execute and return false" do
+    #     expect(build).to be false
+    #   end
+    # end
 
-  describe '#cmd_array' do
-    it 'returns an array' do
-      expect(devdev.send(:cmd_array).class).to be Array
+    describe "build:all" do
+      let!(:build_all) { system("devdev build:all") }
+
+      it "will execute and return true" do
+        expect(build_all).to be true
+      end
     end
   end
 end

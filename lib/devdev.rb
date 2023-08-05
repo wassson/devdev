@@ -2,12 +2,17 @@
 
 module DevDev
   class << self
-    # view all commands
-    def all
-      puts blue <<~TEXT
-        💬 This should be blue text!
-      TEXT
-      cmd_array
+    # build all commands
+    def build_all
+      i = 0
+      commands = cmd_array
+      commands.each do |cmd|
+        puts blue <<~TEXT
+          #{i += 1}. #{cmd[:title]}
+        TEXT
+
+        puts "    #{cmd[:cmd]}\n\n"
+      end
     end
 
     # view next command
@@ -25,17 +30,17 @@ module DevDev
     def cmd_array
       @cmd_array ||= [
         {
+          title: 'Install Gems',
+          cmd: 'bundle',
+          desc: 'Install all gems listed in the Gemfile. This will create a Gemfile.lock.',
+          path: false
+        },
+        {
           title: 'Create Database',
           cmd: 'bundle exec rails db:create',
           desc: 'This command creates two PostgresQL databases: app_name_test & app_name_development.',
           notes: 'Before this command runs successfully, you will need to set up your user and password.',
           path: true
-        },
-        {
-          title: 'Install Gems',
-          cmd: 'bundle',
-          desc: 'Install all gems listed in the Gemfile. This will create a Gemfile.lock.',
-          path: false
         }
       ]
     end
