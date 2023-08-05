@@ -12,7 +12,7 @@ describe DevDev do
     #   end
     # end
 
-    describe 'build:all' do
+    describe 'with build:all option' do
       let!(:build_all) { system('devdev build:all') }
 
       it 'will execute and return true' do
