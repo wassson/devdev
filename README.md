@@ -4,7 +4,7 @@ Automate the setup of your local development environment. Build commands to inst
 
 ## Getting Started
 
-COME BACK AND WRITE THIS
+```gem 'devdev', '~> 0.0.9'```
 
 ### Requirements
 
