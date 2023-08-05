@@ -1,9 +1,9 @@
-require "spec_helper"
-require "rspec"
-require "devdev"
+require 'spec_helper'
+require 'rspec'
+require 'devdev'
 
 describe DevDev do
-  context "when executing devdev" do
+  context 'when executing devdev' do
     # describe "without options" do
     #   let!(:build) { system("devdev") }
     #
@@ -12,10 +12,10 @@ describe DevDev do
     #   end
     # end
 
-    describe "build:all" do
-      let!(:build_all) { system("devdev build:all") }
+    describe 'build:all' do
+      let!(:build_all) { system('devdev build:all') }
 
-      it "will execute and return true" do
+      it 'will execute and return true' do
         expect(build_all).to be true
       end
     end

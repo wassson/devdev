@@ -1,14 +1,16 @@
 #!/usr/bin/env ruby
 # frozen_string_literal: true
 
-require "devdev"
+require 'devdev'
 
-# display options: devdev
+# display options:
+# devdev
 if ARGV[0].nil?
-  puts "WE MADE IT HERE"
+  puts 'WE MADE IT HERE'
 end
 
-# start build of all steps: devdev build:all
-if ARGV[0] == "build:all"
+# start build of all steps:
+# devdev build:all
+if ARGV[0] == 'build:all'
   DevDev.build_all
 end
