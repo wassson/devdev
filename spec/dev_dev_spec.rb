@@ -3,9 +3,11 @@ require 'rspec'
 require 'devdev'
 
 describe DevDev do
-  subject { DevDev }
+  let!(:devdev) { described_class }
 
-  it 'should' do
-    expect(subject.all.class).to eq Array
+  describe '#cmd_array' do
+    it 'returns an array' do
+      expect(devdev.send(:cmd_array).class).to be Array
+    end
   end
 end

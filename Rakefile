@@ -7,6 +7,10 @@ GEM_VERSION = DevDev::VERSION
 
 task default: :build
 
+task :test do
+  system 'rspec'
+end
+
 task :build do
   system "gem build #{GEM_NAME}.gemspec"
 end

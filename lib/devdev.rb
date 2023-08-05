@@ -7,7 +7,7 @@ module DevDev
       puts blue <<~TEXT
         💬 This should be blue text!
       TEXT
-      cmd_hash
+      cmd_array
     end
 
     # view next command
@@ -22,8 +22,8 @@ module DevDev
     private
 
     # this will be built from a config created by the user
-    def cmd_hash
-      @cmd_hash ||= [
+    def cmd_array
+      @cmd_array ||= [
         {
           title: 'Create Database',
           cmd: 'bundle exec rails db:create',
