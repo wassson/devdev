@@ -7,3 +7,5 @@ AllCops:
   TargetRubyVersion: 2.7
   NewCops: enable
 
+Style/StringLiterals:
+  EnforcedStyle: single_quotes
