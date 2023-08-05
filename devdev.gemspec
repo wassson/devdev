@@ -18,6 +18,7 @@ Gem::Specification.new do |spec|
   spec.extra_rdoc_files       = ['README.md']
   spec.executables            = ['devdev']
 
+  spec.add_development_dependency 'rspec', '~> 3.12.0'
   spec.add_development_dependency 'rubocop', '~> 1.55'
   spec.add_development_dependency 'rubocop-rspec', '~> 2.23'
   spec.metadata['rubygems_mfa_required'] = 'true'

@@ -13,6 +13,8 @@ module Devdev
         create_file 'config/initializers/devdev.rb', <<~RUBY
           ### DEVDEV INITIALIZER ###
         RUBY
+
+        template
       end
     end
   end
