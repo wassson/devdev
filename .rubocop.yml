@@ -1,3 +1,5 @@
+inherit_from: "https://www.goodcop.style/rubocop.yml"
+
 require:
   - rubocop-rspec
 
@@ -5,5 +7,3 @@ AllCops:
   TargetRubyVersion: 2.7
   NewCops: enable
 
-Style/Documentation:
-  Enabled: false
