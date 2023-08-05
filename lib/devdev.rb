@@ -7,7 +7,7 @@ module DevDev
       puts blue <<~TEXT
         💬 This should be blue text!
       TEXT
-      # cmd_hash
+      cmd_hash
     end
 
     # view next command
