@@ -1,32 +1,23 @@
 # frozen_string_literal: true
 
+require_relative 'devdev/cli/helpers'
+
 module DevDev
   class << self
-    # build all commands
-    def build_all
+    def all
       i = 0
       commands = cmd_array
       commands.each do |cmd|
-        puts blue <<~TEXT
-          #{i += 1}. #{cmd[:title]}
+        # I don't love this, but we can fix it in another PR
+        puts DevDev::CLI::Helpers.blue <<~TEXT
+          #{i += 1}. #{cmd[:cmd]}
         TEXT
-
-        puts "    #{cmd[:cmd]}\n\n"
       end
     end
 
-    # view next command
-    def next; end
-
-    # skip command
-    def skip; end
-
-    # view command documentation
-    def info; end
-
     private
 
-    # this will be built from a config created by the user
+    # this will be built from the initialized Devfile
     def cmd_array
       @cmd_array ||= [
         {
@@ -43,10 +34,6 @@ module DevDev
           path: true
         }
       ]
-    end
-
-    def blue(string)
-      "\u001b[38;5;39;1m#{string}\033[0m"
     end
   end
 end
