@@ -7,9 +7,10 @@ require_relative 'helpers'
 
 module DevDev
   module CLI
-    # This is the CLI interface that the user interacts with.
-    # Each command that the user can call is mapped here.
     class Interface < Thor
+      package_name 'DevDev'
+      map '-a' => :all
+
       def self.exit_on_failure?
         true
       end
