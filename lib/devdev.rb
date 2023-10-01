@@ -21,6 +21,10 @@ module DevDev
     def cmd_array
       @cmd_array ||= [
         {
+          title: 'Clone devdev app from GitHub',
+          cmd: 'git clone ...'
+        },
+        {
           title: 'Install Gems',
           cmd: 'bundle',
           desc: 'Install all gems listed in the Gemfile. This will create a Gemfile.lock.',
